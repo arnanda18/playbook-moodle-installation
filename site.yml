@@ -1,0 +1,12 @@
+- name: Install Moodle, Apache2, PHP, Etc
+  hosts:  moodleserver
+  remote_user: moodle
+  become: yes
+  become_method: sudo
+
+  roles:
+    - common
+    - apache2
+    - moodle
+    - mysql
+    - php

@@ -1,0 +1,15 @@
+#Auth Server moodle
+username: moodle
+user_pass: ops
+
+# Name Database
+db_name: moodle
+
+# Database User
+db_user: moodle_permasa
+
+# Password User
+db_pass: P3rm4sat0!
+
+#Database Connection For User Root
+mysql_password: ops

@@ -1,0 +1,19 @@
+---
+- name: Play 1
+  hosts: WebServer
+  tasks:
+  - name: install apache2
+    apt: 
+      name: apache2
+      state: present
+  - name: start apache2
+    service: 
+      name: apache2
+      state: start
+- name: Play 2
+  hosts: DatabaseServer
+  tasks:
+    - name: install MySQL
+      apt: 
+        name: MySQL
+        state: present

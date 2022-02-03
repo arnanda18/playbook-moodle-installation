@@ -1,0 +1,30 @@
+---
+- name: Install PHP and Additional
+  apt: 
+      name: "{{ item }}"
+      state: present
+  with_items:
+    - php7.4
+    - php7.4-pspell
+    - php7.4-curl 
+    - php7.4-gd 
+    - php7.4-intl 
+    - php7.4-mysql 
+    - php7.4-xml 
+    - php7.4-xmlrpc 
+    - php7.4-ldap 
+    - php7.4-zip 
+    - php7.4-soap 
+    - php7.4-mbstring
+    
+- name: Config php.ini
+  lineinfile:
+      path: /etc/php/7.4/cli/php.ini
+      regex: '^;extension=mysqli'
+      line: 'extension=mysqli'
+      backrefs: yes
+
+- name: Restart Apache to Reload PHP configuration
+  service:
+    name: apache2
+    state: restarted

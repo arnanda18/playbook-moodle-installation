@@ -1,0 +1,10 @@
+- name: Install additional Software
+  apt: 
+      name: "{{ item }}"
+      state: present
+  with_items:
+    - git
+    - graphviz
+    - aspell
+    - ghostscript
+    - clamav
