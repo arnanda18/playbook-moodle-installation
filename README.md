@@ -1,4 +1,5 @@
 # Ansible Automation setup Moodle and Dependency in Ubuntu Server
+Step by Step :
 1. Pull or Clone This repository to Your Local Machine
 2. Install Ansible in your local Machine
 3. Make sure that ansible is running with command $ansible --verison
